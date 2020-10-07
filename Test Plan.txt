@@ -1,0 +1,27 @@
+Test Plan
+
+Manual Testing
+	Test what can be inserted into the text area.
+	Test the amount of numbers that can be inserted into text area.
+	Test the amount of symbols and decimals that can be inserted into text area and the result they get when calculated.
+	Test why CSS does not connect to HTML.
+	Test fraction logic, division and decimals work.
+	Test every button that can be used in some sort of equation.
+	Test positive and negative numbers.
+
+Automated Testing
+	Selenium IDE
+		Five Positive Tests for +, -, *, /, and ^.
+		Two Negative Tests for the equals and the decimals places.
+		Testing title and footer in Chrome.
+
+Stress Testing
+	Apache JMeter
+		Stress test amount of user that can use app at once.
+
+Interface Testing
+	Postman - Web API calls
+		GET request
+		Status code 200 OK
+		Content-Type included in response header
+		Title element present and matching
