@@ -22,7 +22,7 @@
             <br>
             
             <input type="button" value=" c " onclick="calculator.answer.value = ''" />
-            <input type="button" value=" frac " onclick="calculator.answer.value += 'frac'" />
+            <input type="button" value=" ^ " onclick="calculator.answer.value += 'power'" />
             <input type="button" name="delete"  value=" del " onclick="calculator.answer.value = document.calculator.answer.value.substring(0,document.calculator.answer.value.length*1 -1)" />
             <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
             <br>
@@ -54,6 +54,7 @@
           <div id="brand">
             <p>brlong.me
           </div>
-        </div>
+	</div>
+	<footer>Jacob Long | IT5236 Calculator | &copy Copyright 2020 </footer>
     </body>
 </html>
