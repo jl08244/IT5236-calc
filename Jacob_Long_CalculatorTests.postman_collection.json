@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "f0b329f9-f45d-4462-81c1-80c7d6718786",
+		"name": "Jacob_Long_CalculatorTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ab731b1-f3e6-4214-85f7-ca5762762f5c",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brlong.me/calc/IT5236-calc/index.php",
+					"protocol": "https",
+					"host": [
+						"brlong",
+						"me"
+					],
+					"path": [
+						"calc",
+						"IT5236-calc",
+						"index.php"
+					]
+				},
+				"description": "GET request for calculator page."
+			},
+			"response": []
+		},
+		{
+			"name": "Status code 200 - test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "650f2cd7-2775-4475-b9fc-6321a01efd0c",
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brlong.me/calc/IT5236-calc/index.php",
+					"protocol": "https",
+					"host": [
+						"brlong",
+						"me"
+					],
+					"path": [
+						"calc",
+						"IT5236-calc",
+						"index.php"
+					]
+				},
+				"description": "Checks to see if the status code is equal to 200 OK."
+			},
+			"response": []
+		},
+		{
+			"name": "Content-Type - test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5101499e-04d5-40fb-847a-a2f533c957d0",
+						"exec": [
+							"pm.test(\"Content-Type is included in the response header\", function () {\r",
+							"   pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brlong.me/calc/IT5236-calc/index.php",
+					"protocol": "https",
+					"host": [
+						"brlong",
+						"me"
+					],
+					"path": [
+						"calc",
+						"IT5236-calc",
+						"index.php"
+					]
+				},
+				"description": "Checks that the content-type is included in the header."
+			},
+			"response": []
+		},
+		{
+			"name": "Title element - test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d87629b1-86ae-4805-b3ea-5f4b44291e31",
+						"exec": [
+							"pm.test(\"Title element present and contains my title 'Scientific Calculator'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"<title>\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"Scientific Calculator\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://brlong.me/calc/IT5236-calc/index.php",
+					"protocol": "https",
+					"host": [
+						"brlong",
+						"me"
+					],
+					"path": [
+						"calc",
+						"IT5236-calc",
+						"index.php"
+					]
+				},
+				"description": "Tests to see if a title element is present and contains the title it was given."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
