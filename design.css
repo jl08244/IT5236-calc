@@ -1,7 +1,9 @@
+/*Sets the html background to white */
 html {
   background-color: white;
 }
 
+/*Centers the body, stes the width to 75% of the page, and changes the background color to white */
 body {
   margin: auto;
   width: 75%;
@@ -9,6 +11,7 @@ body {
 
 }
 
+/*Takes the calc div and centers it, gives it a width, and creates the overall shape of the calculator */
 #calc{
   position: relative;
   width: 600px;
@@ -19,21 +22,27 @@ body {
   background: #636CD9;
 }
 
+/*Centers the heading and pulls to down from the top */
 h1 {
   text-align: center;
   padding-top: 30px;
 }
 
+/*Takes the brand div and places it on the bottom right of the calculator */
 #brand{
   position: relative;
   float: right;
   margin-top: 15px;
   padding-right: 10px;
 }
+
+/*Font information for the brand div */
 #brand p{
   font-size: 20px;
   font-weight: 900;
 }
+
+/*Creates the style for buttons while they are inactive */
 input[type=button] {
   background: lightGray;
   width: 22%;
@@ -43,16 +52,21 @@ input[type=button] {
   margin-left: 13px;
   margin-top: 10px;
 }
+
+/*Style for the button if it has been clicked */
 input[type=button]:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+/*Style for the button if it is being hovered over */
 input[type=button]:hover {
   background-color: #1B1919;
   color: white;
 }
 
+/*Text box where the input and output happen. Styled to look like a calculator. */
 input[type = text] {
   position: relative;
   display: block;
@@ -65,6 +79,7 @@ input[type = text] {
   box-shadow: 4px 0px 10px black inset;
 }
 
+/*Centers the footer and gives it space from the calculator */
 footer {
   text-align: center;
   padding-top: 30px;
